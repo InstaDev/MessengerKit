@@ -20,41 +20,40 @@
                     <rect key="frame" x="10" y="5" width="414" height="40"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grt-NM-bT7" customClass="MSGImessageSendButton" customModule="MessengerKit" customModuleProvider="target">
-                    <rect key="frame" x="389" y="11" width="30" height="30"/>
-                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grt-NM-bT7" customClass="MSGImessageSendButton" customModule="MessengerKit" customModuleProvider="target">
+                    <rect key="frame" x="354" y="10" width="30" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="Rxr-d5-dSn"/>
                         <constraint firstAttribute="height" constant="30" id="ZaS-xq-rk5"/>
                     </constraints>
-                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" image="Arrow"/>
+                    <state key="normal" image="Send"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Fe-fw-xkk" customClass="MSGImessageSendButton" customModule="MessengerKit" customModuleProvider="target">
-                    <rect key="frame" x="347" y="11" width="30" height="30"/>
-                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Fe-fw-xkk" customClass="MSGImessageSendButton" customModule="MessengerKit" customModuleProvider="target">
+                    <rect key="frame" x="389" y="10" width="30" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="EFG-AF-GFu"/>
                         <constraint firstAttribute="height" constant="30" id="y4l-vK-QzX"/>
                     </constraints>
-                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" image="Arrow"/>
+                    <state key="normal" image="Attachment"/>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="grt-NM-bT7" secondAttribute="trailing" constant="15" id="4eL-ov-ts4"/>
+                <constraint firstItem="5Fe-fw-xkk" firstAttribute="leading" secondItem="grt-NM-bT7" secondAttribute="trailing" constant="5" id="5b5-7o-Gu0"/>
+                <constraint firstItem="5Fe-fw-xkk" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="97D-Ku-gyr"/>
                 <constraint firstItem="eQZ-xx-JWZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="PRK-v3-aI1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5Fe-fw-xkk" secondAttribute="trailing" constant="15" id="Q63-1A-2Hm"/>
                 <constraint firstItem="eQZ-xx-JWZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="SJn-PA-lEg"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5Fe-fw-xkk" secondAttribute="bottom" constant="9" id="XX4-MD-5y8"/>
+                <constraint firstItem="grt-NM-bT7" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gg0-Ak-qGc"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eQZ-xx-JWZ" secondAttribute="trailing" constant="10" id="l6v-w6-uKZ"/>
-                <constraint firstItem="grt-NM-bT7" firstAttribute="leading" secondItem="5Fe-fw-xkk" secondAttribute="trailing" constant="12" id="mYq-Yt-AH4"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eQZ-xx-JWZ" secondAttribute="bottom" constant="5" id="otT-xC-aHz"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="grt-NM-bT7" secondAttribute="bottom" constant="9" id="t6c-bg-dQL"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="attachButton" destination="5Fe-fw-xkk" id="8h0-wA-cqY"/>
                 <outlet property="sendButton" destination="grt-NM-bT7" id="gXA-SH-Ei5"/>
                 <outlet property="textView" destination="eQZ-xx-JWZ" id="r2d-pM-wGX"/>
             </connections>
@@ -62,6 +61,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Arrow" width="15" height="16"/>
+        <image name="Attachment" width="23" height="12"/>
+        <image name="Send" width="21" height="18"/>
     </resources>
 </document>

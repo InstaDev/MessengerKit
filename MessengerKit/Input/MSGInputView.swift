@@ -17,6 +17,9 @@ open class MSGInputView: UIControl {
 
     /// The send button
     @IBOutlet open var sendButton: UIButton!
+    
+    /// The attach button
+    @IBOutlet open var attachButton: UIButton!
 
     /// The height constraint to be modified as required.
     /// This should not be set manually but instead use the `minHeight` and `maxHeight` properties.
@@ -27,6 +30,8 @@ open class MSGInputView: UIControl {
 
     /// The maximum height constraint to be set
     public var maxHeight: CGFloat = 120
+    
+    public var isAttachButtonTapped: Bool = false
     
     /// The nib the view should be loaded from.
     /// If this isn't set the view will be loaded from code.
@@ -57,6 +62,7 @@ open class MSGInputView: UIControl {
         didSet {
             textView.tintColor = tintColor
             sendButton.tintColor = tintColor
+            attachButton.tintColor = tintColor
         }
     }
     
@@ -83,6 +89,7 @@ open class MSGInputView: UIControl {
         addHeightConstraints()
         setupTextView()
         setupSendButton()
+        setupAttachButton()
     }
 
     private func addHeightConstraints() {
@@ -96,13 +103,24 @@ open class MSGInputView: UIControl {
     }
 
     private func setupSendButton() {
+        
         sendButton.isEnabled = false
         sendButton.addTarget(self, action: #selector(sendButtonTapped(_:)), for: .touchUpInside)
+    }
+    
+    private func setupAttachButton() {
+        attachButton.isEnabled = true
+        attachButton.addTarget(self, action: #selector(attachButtonTapped(_:)), for: .touchUpInside)
     }
 
     @objc func sendButtonTapped(_ sender: UIButton) {
         message = textView.text
         textView.text = nil
+        sendActions(for: .primaryActionTriggered)
+    }
+    
+    @objc func attachButtonTapped(_ sender: UIButton) {
+        isAttachButtonTapped = true
         sendActions(for: .primaryActionTriggered)
     }
     

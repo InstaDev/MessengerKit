@@ -73,12 +73,16 @@ class ViewController: MSGMessengerViewController {
     }
     
     override func inputViewPrimaryActionTriggered(inputView: MSGInputView) {
-        id += 1
-        
-        let body: MSGMessageBody = (inputView.message.containsOnlyEmoji && inputView.message.count < 5) ? .emoji(inputView.message) : .text(inputView.message)
-        
-        let message = MSGMessage(id: id, body: body, user: steve, sentAt: Date())
-        insert(message)
+        if !inputView.isAttachButtonTapped {
+            id += 1
+            
+            let body: MSGMessageBody = (inputView.message.containsOnlyEmoji && inputView.message.count < 5) ? .emoji(inputView.message) : .text(inputView.message)
+            
+            let message = MSGMessage(id: id, body: body, user: steve, sentAt: Date())
+            insert(message)
+        } else {
+            inputView.isAttachButtonTapped = false
+        }
     }
     
     override func insert(_ message: MSGMessage) {

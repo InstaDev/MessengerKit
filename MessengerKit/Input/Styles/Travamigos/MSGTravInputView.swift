@@ -44,8 +44,12 @@ open class MSGTravInputView: MSGInputView {
     override open func setup() {
         
         textView = MSGPlaceholderTextView()
+        
         sendButton = UIButton(type: .system)
         
+        attachButton = UIButton(type: .system)
+        
+        print("")
         textView.textContainerInset = UIEdgeInsets(top: 10, left: 12, bottom: 10, right: 12)
         textView.contentInset = UIEdgeInsets(top: 6, left: 0, bottom: 6, right: 0)
         
@@ -87,6 +91,7 @@ open class MSGTravInputView: MSGInputView {
         stackView.addArrangedSubview(textView)
         stackView.addArrangedSubview(separator)
         stackView.addArrangedSubview(sendButton)
+        stackView.addArrangedSubview(attachButton)
     }
     
     func setupTextView() {
