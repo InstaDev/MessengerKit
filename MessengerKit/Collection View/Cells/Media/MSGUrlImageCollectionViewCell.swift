@@ -17,7 +17,7 @@ class MSGUrlImageCollectionViewCell: MSGMessageCell {
             guard let message = message,
                 case let MSGMessageBody.url(url) = message.body else { return }
             if let intUrl = URL(string: url) {
-                imageView.kf.setImage(with: intUrl)
+                imageView.load.request(with: intUrl)
             }
         }
     }
