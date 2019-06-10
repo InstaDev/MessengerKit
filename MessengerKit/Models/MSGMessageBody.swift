@@ -20,6 +20,7 @@ public enum MSGMessageBody {
     case text(String)
     case emoji(String)
     case image(UIImage)
+    case url(String)
     case video(UIImage, String)
     case custom(Any)
     

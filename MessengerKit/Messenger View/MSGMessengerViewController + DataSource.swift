@@ -30,6 +30,17 @@ extension MSGMessengerViewController: UICollectionViewDataSource, UICollectionVi
         let isLast = indexPath.item + 1 == count
         
         switch message.body {
+            
+        case .url:
+            let identifier = message.user.isSender ? "outgoingImage" : "incomingImage"
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! MSGMessageCell
+            
+            cell.delegate = self
+            cell.message = message
+            cell.style = style
+            cell.isLastInSection = isLast
+            
+            return cell
         case .text:
             let identifier = message.user.isSender ? "outgoingText" : "incomingText"
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! MSGMessageCell

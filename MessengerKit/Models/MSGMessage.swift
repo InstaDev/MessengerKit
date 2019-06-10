@@ -18,17 +18,25 @@ public class MSGMessage: NSObject{
     /// The body of the message.
     public let body: MSGMessageBody
     
+    /// The url of image.
+    public let imageUrl: String?
+    
     /// The user that sent the message.
     public let user: MSGUser
     
     /// The time that the message was sent.
     public let sentAt: Date
     
-    public init(id: Int, body: MSGMessageBody, user: MSGUser, sentAt: Date) {
+    public init(id: Int,
+                body: MSGMessageBody,
+                imageUrl: String? = nil,
+                user: MSGUser,
+                sentAt: Date) {
         self.id = id
         self.body = body
         self.user = user
         self.sentAt = sentAt
+        self.imageUrl = imageUrl
     }
     
 }

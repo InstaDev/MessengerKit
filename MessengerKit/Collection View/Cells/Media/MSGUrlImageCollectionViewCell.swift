@@ -1,14 +1,13 @@
 //
-//  MSGImageCollectionViewCell.swift
+//  MSGUrlImageCollectionViewCell.swift
 //  MessengerKit
 //
-//  Created by Stephen Radford on 11/06/2018.
-//  Copyright © 2018 Cocoon Development Ltd. All rights reserved.
+//  Created by Andrey Anisimov on 10/06/2019.
 //
 
 import UIKit
 
-class MSGImageCollectionViewCell: MSGMessageCell {
+class MSGUrlImageCollectionViewCell: MSGMessageCell {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageViewWidthConstraint: NSLayoutConstraint!
@@ -16,10 +15,10 @@ class MSGImageCollectionViewCell: MSGMessageCell {
     override public var message: MSGMessage? {
         didSet {
             guard let message = message,
-                case let MSGMessageBody.image(image) = message.body else { return }
-            
-            imageView.image = image
-            guard let url = message.imageUrl else { return }
+                case let MSGMessageBody.url(url) = message.body else { return }
+            if let intUrl = URL(string: url) {
+                imageView.kf.setImage(with: intUrl)
+            }
         }
     }
     
@@ -28,7 +27,7 @@ class MSGImageCollectionViewCell: MSGMessageCell {
         
         imageView.layer.cornerRadius = 18
         imageView.layer.masksToBounds = true
-        imageView.isUserInteractionEnabled = true   
+        imageView.isUserInteractionEnabled = true
     }
-
+    
 }
