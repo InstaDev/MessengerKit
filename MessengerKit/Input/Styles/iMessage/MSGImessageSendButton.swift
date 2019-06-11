@@ -15,7 +15,7 @@ class MSGImessageSendButton: UIButton {
     override var isEnabled: Bool {
         didSet {
             UIView.animate(withDuration: 0.3) {
-                self.alpha = self.isEnabled ? 1 : 0.3
+                self.alpha = self.isEnabled ? 0.3 : 1.0
             }
         }
     }
