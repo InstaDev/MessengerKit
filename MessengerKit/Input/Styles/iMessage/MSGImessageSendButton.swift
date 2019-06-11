@@ -50,7 +50,7 @@ class MSGImessageSendButton: UIButton {
         overlay.isHidden = true
         overlay.frame = layer.bounds
         
-        layer.addSublayer(overlay)
+        //layer.addSublayer(overlay)
     }
 
 }

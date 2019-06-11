@@ -120,6 +120,8 @@ open class MSGInputView: UIControl {
     }
     
     @objc func attachButtonTapped(_ sender: UIButton) {
+        message = textView.text
+        textView.text = nil
         isAttachButtonTapped = true
         sendActions(for: .primaryActionTriggered)
     }
