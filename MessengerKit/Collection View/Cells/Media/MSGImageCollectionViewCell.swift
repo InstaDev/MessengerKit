@@ -19,7 +19,6 @@ class MSGImageCollectionViewCell: MSGMessageCell {
                 case let MSGMessageBody.image(image) = message.body else { return }
             
             imageView.image = image
-            guard let url = message.imageUrl else { return }
         }
     }
     
