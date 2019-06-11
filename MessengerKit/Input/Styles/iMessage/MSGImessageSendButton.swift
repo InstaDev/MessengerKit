@@ -22,7 +22,13 @@ class MSGImessageSendButton: UIButton {
     
     override var isHighlighted: Bool {
         didSet {
-            self.alpha = self.isHighlighted ? 1 : 0.3
+            if self.isEnabled {
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.alpha = self.isHighlighted ? 0.3 : 1.0
+                }) { (res) in
+                    self.alpha = 1.0
+                }
+            }
         }
     }
     
