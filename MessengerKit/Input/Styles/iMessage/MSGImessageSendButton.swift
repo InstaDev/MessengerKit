@@ -10,7 +10,7 @@ import UIKit
 
 class MSGImessageSendButton: UIButton {
 
-    let overlay = CALayer()
+    //let overlay = CALayer()
     
     override var isEnabled: Bool {
         didSet {
@@ -22,13 +22,13 @@ class MSGImessageSendButton: UIButton {
     
     override var isHighlighted: Bool {
         didSet {
-            overlay.isHidden = !isHighlighted
+            self.alpha = self.isHighlighted ? 1 : 0.3
         }
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        overlay.frame = layer.bounds
+        //overlay.frame = layer.bounds
     }
     
     override init(frame: CGRect) {
@@ -45,10 +45,10 @@ class MSGImessageSendButton: UIButton {
         layer.cornerRadius = bounds.width / 2
         layer.masksToBounds = true
         
-        overlay.backgroundColor = UIColor.black.cgColor
-        overlay.opacity = 0.3
-        overlay.isHidden = true
-        overlay.frame = layer.bounds
+//        overlay.backgroundColor = UIColor.black.cgColor
+//        overlay.opacity = 0.3
+//        overlay.isHidden = true
+//        overlay.frame = layer.bounds
         
         //layer.addSublayer(overlay)
     }
