@@ -27,6 +27,7 @@
                     </imageView>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="cFp-Pv-V22" firstAttribute="top" secondItem="nw2-Kp-ZmF" secondAttribute="top" id="Yn9-Go-GO4"/>
                 <constraint firstAttribute="bottom" secondItem="cFp-Pv-V22" secondAttribute="bottom" id="pFv-QJ-ceh"/>
