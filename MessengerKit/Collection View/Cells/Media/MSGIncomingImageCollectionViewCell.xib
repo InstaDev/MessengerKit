@@ -21,13 +21,13 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lTb-3z-uN0">
                         <rect key="frame" x="20" y="0.0" width="269" height="176"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="269" id="Gsv-eB-MmU"/>
                         </constraints>
                     </imageView>
                 </subviews>
             </view>
-            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="lTb-3z-uN0" firstAttribute="leading" secondItem="rWJ-Ue-VCr" secondAttribute="leading" constant="20" id="ATr-e8-e47"/>
                 <constraint firstAttribute="bottom" secondItem="lTb-3z-uN0" secondAttribute="bottom" id="CmA-xR-jvU"/>
