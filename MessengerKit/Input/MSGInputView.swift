@@ -109,7 +109,7 @@ open class MSGInputView: UIControl {
     }
     
     private func setupAttachButton() {
-        attachButton.isEnabled = true
+        attachButton.isEnabled = false
         attachButton.addTarget(self, action: #selector(attachButtonTapped(_:)), for: .touchUpInside)
     }
 
@@ -140,6 +140,7 @@ extension MSGInputView: MSGPlaceholderTextViewDelegate {
 
     open func textViewDidChange(_ textView: UITextView) {
         sendButton.isEnabled = textView.text != ""
+        attachButton.isEnabled = textView.text != ""
         let size = textView.sizeThatFits(CGSize(width: textView.bounds.size.width, height: .infinity))
         let height = size.height + 11
 
