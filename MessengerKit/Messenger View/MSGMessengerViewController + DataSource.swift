@@ -201,7 +201,10 @@ extension MSGMessengerViewController: UICollectionViewDataSource, UICollectionVi
     }
     
     open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        guard style.headerHeight > 0 else {
+        
+        guard style.headerHeight > 0,
+            let title = dataSource?.headerTitle(for: section),
+            !title.isEmpty else {
             return .zero
         }
         
