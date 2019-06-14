@@ -42,6 +42,9 @@ open class MSGTravCollectionView: MSGCollectionView {
         register(UINib(nibName: "MSGUrlImageCollectionViewCell", bundle: MessengerKit.bundle),
                  forCellWithReuseIdentifier: "urlImage")
         
+        register(UINib(nibName: "MSGIncomingUrlImageCollectionViewCell", bundle: MessengerKit.bundle),
+                 forCellWithReuseIdentifier: "incomingUrlImage")
+        
         // Footers
         
         register(UINib(nibName: "MSGTravOutgoingCollectionViewSectionFooter", bundle: MessengerKit.bundle),

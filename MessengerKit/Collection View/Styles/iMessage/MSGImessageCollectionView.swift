@@ -40,6 +40,9 @@ open class MSGImessageCollectionView: MSGCollectionView {
         
         register(UINib(nibName: "MSGUrlImageCollectionViewCell", bundle: MessengerKit.bundle),
                  forCellWithReuseIdentifier: "urlImage")
+        //incomingUrlImage
+        register(UINib(nibName: "MSGIncomingUrlImageCollectionViewCell", bundle: MessengerKit.bundle),
+                 forCellWithReuseIdentifier: "incomingUrlImage")
         
         // Footers
         

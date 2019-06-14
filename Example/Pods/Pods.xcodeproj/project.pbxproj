@@ -38,6 +38,7 @@
 		4B40BBE722AE78D9005958AC /* CGImageSource+ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B40BBD922AE78D9005958AC /* CGImageSource+ImageLoader.swift */; };
 		4B40BBE822AE78D9005958AC /* Data+ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B40BBDA22AE78D9005958AC /* Data+ImageLoader.swift */; };
 		4B40BBE922AE78D9005958AC /* ImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B40BBDB22AE78D9005958AC /* ImageLoader.h */; };
+		4B66197E22B3CD7C0031A6F3 /* MSGIncomingUrlImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B66197D22B3CD7C0031A6F3 /* MSGIncomingUrlImageCollectionViewCell.xib */; };
 		4BCA7D6222AFA3DF004D0446 /* MSGUrlImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BCA7D6122AFA3DF004D0446 /* MSGUrlImageCollectionViewCell.xib */; };
 		559D693C2F5EF81DE659E4A70061529C /* MSGMessageCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C1355665D8812ECE60D57A7AAD87F /* MSGMessageCellDelegate.swift */; };
 		59F8FC1E8B3F63A212E9BE61BD9EEEE8 /* MSGMessengerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD47A3549A50112F60EE7825064BEE3 /* MSGMessengerViewController.swift */; };
@@ -147,6 +148,7 @@
 		4B40BBDA22AE78D9005958AC /* Data+ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+ImageLoader.swift"; sourceTree = "<group>"; };
 		4B40BBDB22AE78D9005958AC /* ImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLoader.h; sourceTree = "<group>"; };
 		4B40BBDC22AE78D9005958AC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B66197D22B3CD7C0031A6F3 /* MSGIncomingUrlImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MSGIncomingUrlImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		4BCA7D6122AFA3DF004D0446 /* MSGUrlImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MSGUrlImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		4C15622CEAAB923863FB3D89283E546B /* Pods-MessengerKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MessengerKit_Example-resources.sh"; sourceTree = "<group>"; };
 		4DD3D695F2CCE3CFA6ED20D771DBB535 /* MSGIncomingImageCollectionViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = MSGIncomingImageCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -690,6 +692,7 @@
 				4DD3D695F2CCE3CFA6ED20D771DBB535 /* MSGIncomingImageCollectionViewCell.xib */,
 				8303BCF0770DE6B88DE25B59FE87D8A9 /* MSGOutgoingImageCollectionViewCell.xib */,
 				4BCA7D6122AFA3DF004D0446 /* MSGUrlImageCollectionViewCell.xib */,
+				4B66197D22B3CD7C0031A6F3 /* MSGIncomingUrlImageCollectionViewCell.xib */,
 			);
 			path = Media;
 			sourceTree = "<group>";
@@ -914,6 +917,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B66197E22B3CD7C0031A6F3 /* MSGIncomingUrlImageCollectionViewCell.xib in Resources */,
 				4BCA7D6222AFA3DF004D0446 /* MSGUrlImageCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

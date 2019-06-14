@@ -32,7 +32,7 @@ extension MSGMessengerViewController: UICollectionViewDataSource, UICollectionVi
         switch message.body {
             
         case .url:
-            let identifier = "urlImage"
+            let identifier = message.user.isSender ? "urlImage" : "incomingUrlImage"
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! MSGMessageCell
             
             cell.delegate = self
