@@ -212,7 +212,9 @@ extension MSGMessengerViewController: UICollectionViewDataSource, UICollectionVi
     }
     
     open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        guard style.footerHeight > 0 else {
+        guard style.footerHeight > 0,
+            let title = dataSource?.footerTitle (for: section),
+            !title.isEmpty else {
             return .zero
         }
         

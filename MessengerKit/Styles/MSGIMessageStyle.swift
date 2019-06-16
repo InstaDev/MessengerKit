@@ -15,7 +15,7 @@ public struct MSGIMessageStyle: MSGMessengerStyle {
     
     public var headerHeight: CGFloat = 12
     
-    public var footerHeight: CGFloat = 30
+    public var footerHeight: CGFloat = 20
     
     public var backgroundColor: UIColor = .white
     
