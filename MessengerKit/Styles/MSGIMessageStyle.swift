@@ -85,7 +85,7 @@ public struct MSGIMessageStyle: MSGMessengerStyle {
     public var alwaysDisplayTails: Bool = false
     
     /// The font used by header views
-    public var headerFont: UIFont = UIFont.systemFont(ofSize: 10)
+    public var headerFont: UIFont = UIFont.systemFont(ofSize: 10, weight: .semibold)
     
     /// The text color used by header views
     public var headerTextColor: UIColor = UIColor(hue:0.67, saturation:0.03, brightness:0.58, alpha:1.00)
